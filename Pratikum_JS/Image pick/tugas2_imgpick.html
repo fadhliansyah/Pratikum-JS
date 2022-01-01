@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+    <div>
+        <h3>Pilih Gambar yang Disukai</h3>
+        <table style="border: solid 1px;">
+            <tr>
+                <td>
+                    <label for="hewan">Pilihlah Salah Satu Hewan</label><br>
+                    <select id="hewan">
+                        <option value="singa">Singa</option>
+                        <option value="gajah">Gajah</option>
+                        <option value="badak">Badak</option>
+                        <option value="kucing">Kucing</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="cetak_gambar()">
+        Print
+    </button>
+    <br>
+    <div style="width: 100px; height: 100px; border-style: solid 1px;">
+        <img src="" id="gambar">
+    </div>
+    <script>
+        function cetak_gambar() {
+            const hewan = document.getElementById("hewan");
+            const gambar = document.getElementById("gambar");
+
+            if (hewan.value === "singa") {
+                gambar.src = "singa.jpeg"
+                window.alert("Singa sang raja hutan")
+            }
+
+            if (hewan.value === "gajah") {
+                gambar.src = "gajah.jpg"
+                window.alert("hewan yang besar")
+            }
+
+            if (hewan.value === "badak") {
+                gambar.src = "badak.jpg"
+                window.alert("hewan yang di buru")
+            }
+
+            if (hewan.value === "kucing") {
+                gambar.src = "kucing.jpg"
+                window.alert("kucing bar bar")
+            }
+        }
+    </script>
+</body>
+
+</html>
